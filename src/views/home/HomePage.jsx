@@ -1,4 +1,3 @@
-import images from "../../utils/images";
 import "../../styles/HomePage.scss";
 import {
   Title,

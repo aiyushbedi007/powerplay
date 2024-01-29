@@ -5,7 +5,6 @@ import {
   Basket,
   Error,
   Login,
-  Account,
   ViewProductSingle,
 } from "./views/index";
 import { Navbar } from "./components/index";
@@ -23,7 +22,6 @@ function App() {
       <Routes>
         {/* Protected routes */}
         <Route element={<ProtectedRoute authData={authData} />}>
-          <Route path="account" element={<Account />} />
           <Route path="basket" element={<Basket />} />
         </Route>
 

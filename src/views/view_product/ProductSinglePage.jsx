@@ -1,6 +1,5 @@
 import {useContext, useEffect, useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
-import images from '../../utils/images';
 import "../../styles/ProductSinglePage.scss";
 import { formatPrice } from '../../utils/helpers';
 import { AiOutlineMinus, AiOutlinePlus, AiFillCheckCircle, AiOutlineStar } from "react-icons/ai";
@@ -12,7 +11,6 @@ import { AuthContext } from '../../context/authContext';
 const ProductSinglePage = () => {
   const {id} = useParams();
   const { getSingleProduct, dispatch: productDispatch, singleProduct } = useContext(ProductContext);
-  const [previewImg, setPreviewImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const { addToBasket, setBasketMsgOn, setBasketMsgOff, dispatch: basketDispatch, basketMsgStatus } = useContext(BasketContext);
   const { authData } = useContext(AuthContext);

@@ -33,36 +33,28 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-top bg-secondary flex align-center">
         <div className="container w-100 flex align-center justify-end">
-          {authData.isLoggedIn ? (
-            <Link
-              to="/account"
-              className="flex mx-4 align-center justify-end text-dark mx-4"
-            >
-              <FaUser size={14} />
-              <span className="mx-2 fs-13 text-uppercase ls-1">
-                {authData.info.firstName}
-              </span>
-            </Link>
-          ) : (
+          {!authData.isLoggedIn && (
             <Link
               to="login"
-              className="mx-4 login-btn flex align-center justify-end text-dark"
+              className="login-btn flex align-center justify-end text-dark"
             >
               <FaUser size={14} />
               <span className="mx-2 fs-13 text-uppercase ls-1">Login</span>
             </Link>
           )}
 
-          <button
-            type="button"
-            onClick={() => logout(authDispatch)}
-            className="flex align-center justify-end text-dark"
-          >
-            <FiLogOut size={14} />
-            <span className="mx-2 fs-13 text-uppercase ls-1" onClick={notify}>
-              logout
-            </span>
-          </button>
+          {authData.isLoggedIn && (
+            <button
+              type="button"
+              onClick={() => logout(authDispatch)}
+              className="flex align-center justify-end text-dark"
+            >
+              <FiLogOut size={14} />
+              <span className="mx-2 fs-13 text-uppercase ls-1" onClick={notify}>
+                logout
+              </span>
+            </button>
+          )}
         </div>
       </div>
 
