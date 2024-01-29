@@ -1,4 +1,4 @@
-import "../../styles/Title.scss";
+import "../styles/Title.scss";
 import PropTypes from "prop-types";
 
 const Title = ({ title }) => {

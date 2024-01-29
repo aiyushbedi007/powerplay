@@ -1,4 +1,4 @@
-import { actionType } from "../constants/index";
+import * as actionType from "../constants";
 import { storeInLocalStorage } from "../utils/helpers";
 
 const authReducer = (state, action) => {

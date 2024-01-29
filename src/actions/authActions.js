@@ -1,5 +1,5 @@
 import axios from "../api/axios";
-import * as actionType from "./constants";
+import * as actionType from "../constants";
 
 export const makeAuthRequest = async (dispatch, loginData) => {
     dispatch({ type: actionType.AUTH_REQUEST });

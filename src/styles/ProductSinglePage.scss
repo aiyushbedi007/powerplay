@@ -1,13 +1,13 @@
 @import "../App.scss";
 
-.product-s{
-    @media screen and (min-width: 992px){
+.product-s {
+    @media screen and (min-width: 992px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    &-img{
-        .img-preview{
-            &-zoom{
+    &-img {
+        .img-preview {
+            &-zoom {
                 max-width: 400px;
                 height: 360px;
                 margin-right: auto;
@@ -15,9 +15,10 @@
                 overflow: hidden;
             }
 
-            &-collection{
+            &-collection {
                 margin-top: 24px;
-                .collection-item{
+
+                .collection-item {
                     width: 80px;
                     height: 80px;
                     overflow: hidden;
@@ -27,11 +28,11 @@
                     transition: $transition-default;
                     cursor: pointer;
 
-                    &:hover{
+                    &:hover {
                         border-color: $clr-yellow;
                     }
 
-                    &-active{
+                    &-active {
                         border-color: $clr-yellow;
                     }
                 }
@@ -39,62 +40,52 @@
         }
     }
 
-    &-details{
+    &-details {
         padding-right: 32px;
         padding-left: 32px;
         border: 1px solid rgba(0, 0, 0, 0.03);
 
-        .title{
+        .title {
             background-color: rgba(0, 0, 0, 0.03);
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
-        .description{
+
+        .description {
             margin-top: 14px;
             opacity: 0.9;
         }
-        .rating{
+
+        .rating {
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             padding-bottom: 10px;
-        }
-        .price{
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding-bottom: 10px;
-            .actual-price{
-                position: relative;
-                opacity: 0.8;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 100%;
-                    height: 1px;
-                    background-color: $clr-dark;
-                }
-            }
-            .discounted-percent{
-                background-color: rgba(207, 54, 59, 0.1);
-                border-radius: 2px;
-                padding: 0 5px;
-                margin-left: 12px;
-            }
         }
 
-        .quantity{
-            .quantity-toggle{
+        .price {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 10px;
+        }
+
+        .quantity {
+            .quantity-toggle {
                 margin-top: 10px;
-                .qty-dec, .qty-inc, .qty-value{
+
+                .qty-dec,
+                .qty-inc,
+                .qty-value {
                     width: 26px;
                     height: 26px;
                     transition: $transition-default;
                 }
-                .qty-value{
+
+                .qty-value {
                     border: 1px solid rgba(0, 0, 0, 0.05);
                 }
-                .qty-dec, .qty-inc{
+
+                .qty-dec,
+                .qty-inc {
                     background-color: rgba(0, 0, 0, 0.05);
-                    &:hover{
+
+                    &:hover {
                         background-color: $clr-yellow;
                     }
                 }
@@ -102,9 +93,10 @@
         }
     }
 
-    .shop-btns{
+    .shop-btns {
         margin-top: 20px;
-        .shop-btn{
+
+        .shop-btn {
             min-width: 128px;
             text-align: center;
             display: inline-block;
@@ -113,21 +105,23 @@
             color: $clr-white;
             transition: $transition-default;
         }
-        .buy-btn{
+
+        .buy-btn {
             background-color: $clr-primary;
             margin-right: 8px;
             border: 1px solid $clr-primary;
 
-            &:hover{
+            &:hover {
                 background-color: $clr-white;
                 color: $clr-primary;
             }
         }
-        .add-to-cart-btn{
+
+        .add-to-cart-btn {
             background-color: $clr-black;
             border: 1px solid $clr-black;
 
-            &:hover{
+            &:hover {
                 background-color: $clr-white;
                 color: $clr-black;
             }
@@ -135,7 +129,7 @@
     }
 }
 
-.basket-alert{
+.basket-alert {
     position: fixed;
     z-index: 10;
     left: 0;
@@ -150,12 +144,12 @@
     opacity: 0;
     transition: $transition-default;
 
-    &.show{
+    &.show {
         visibility: visible;
         opacity: 1;
     }
 
-    .alert-content{
+    .alert-content {
         background-color: $clr-white;
         max-width: 800px;
         border-radius: 5px;
@@ -164,25 +158,26 @@
         margin-right: 20px;
         position: relative;
 
-        .alert-msg{
+        .alert-msg {
             grid-template-columns: 30px auto;
             align-items: flex-start;
             padding-top: 26px;
         }
 
-        .alert-close-btn{
+        .alert-close-btn {
             position: absolute;
             top: -11px;
             right: -11px;
         }
     }
 
-    .basket-alert-btns{
-        .alert-btn{
+    .basket-alert-btns {
+        .alert-btn {
             border-radius: 4px;
             padding: 5px 10px;
             border: 1px solid $clr-primary;
-            &:last-child{
+
+            &:last-child {
                 margin-left: 8px;
             }
         }

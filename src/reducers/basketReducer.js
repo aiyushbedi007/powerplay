@@ -1,4 +1,4 @@
-import { actionType } from "../constants";
+import * as actionType from "../constants";
 import { storeInLocalStorage } from "../utils/helpers";
 
 const basketReducer = (state, action) => {
@@ -34,7 +34,7 @@ const basketReducer = (state, action) => {
                 if(item.id === action.payload){
                     let tempQty = item.quantity + 1;
                     if(tempQty >= item.stock) tempQty = item.stock;
-                    let tempTotalPrice = (tempQty * item.discountedPrice).toFixed(2);
+                    let tempTotalPrice = (tempQty * item.price).toFixed(2);
                     return {  ...item, quantity: tempQty,  totalPrice: tempTotalPrice  }
                 } else {
                     return item;
@@ -50,7 +50,7 @@ const basketReducer = (state, action) => {
                 if(item.id === action.payload){
                     let tempQty = item.quantity - 1;
                     if(tempQty < 1) tempQty = 1;
-                    let tempTotalPrice = (tempQty * item.discountedPrice).toFixed(2);
+                    let tempTotalPrice = (tempQty * item.price).toFixed(2);
                     return { ...item, quantity: tempQty, totalPrice: tempTotalPrice }
                 } else {
                     return item;

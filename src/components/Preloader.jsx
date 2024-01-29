@@ -1,5 +1,5 @@
-import images from '../../utils/images';
-import "../../styles/Preloader.scss";
+import images from '../utils/images';
+import "../styles/Preloader.scss";
 
 const Preloader = () => {
   return (

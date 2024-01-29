@@ -5,10 +5,6 @@
     }).format(price);
   }
 
-  export const calculateDiscountedPrice = (price, discountPercent) => {
-    return (price - (discountPercent/100) * price);
-  }
-
   // fetch from local storage
   export const fetchFromLocalStorage = (itemName) => {
     let basket = localStorage.getItem(itemName);

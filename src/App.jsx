@@ -1,6 +1,13 @@
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Basket, Error, Login, Account } from "./views/index";
+import {
+  Home,
+  Basket,
+  Error,
+  Login,
+  Account,
+  ViewProductSingle,
+} from "./views/index";
 import { Navbar } from "./components/index";
 import { AuthContext } from "./context/authContext";
 import ProtectedRoute from "./routers/ProtectedRoute";
@@ -25,10 +32,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="error" element={<Error />} />
           <Route path="login" element={<Login />} />
+          <Route path="products/:id" element={<ViewProductSingle />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
-      <Footer />
     </Router>
   );
 }

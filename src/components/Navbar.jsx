@@ -1,21 +1,18 @@
-import { useState, useEffect, useContext } from "react";
-import "../../styles/Navbar.scss";
+import { useEffect, useContext } from "react";
+import "../styles/Navbar.scss";
 import { Link } from "react-router-dom";
 // react icons
 import { FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
-import { BsSearch, BsCaretDownFill } from "react-icons/bs";
 import { HiShoppingBag } from "react-icons/hi";
-import { AiOutlineBars } from "react-icons/ai";
 // contexts
-import { BasketContext } from "../../context/basketContext";
-import { AuthContext } from "../../context/authContext";
+import { BasketContext } from "../context/basketContext";
+import { AuthContext } from "../context/authContext";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
-  const [showCategory, setShowCategory] = useState(false);
   const {
     getBasketTotal,
     itemsCount,
