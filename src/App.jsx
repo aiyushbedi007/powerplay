@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Basket, Error, Login, Account } from "./views/index";
-import { Navbar, Footer } from "./components/common/index";
+import { Navbar } from "./components/index";
 import { AuthContext } from "./context/authContext";
 import ProtectedRoute from "./routers/ProtectedRoute";
 import PublicRoute from "./routers/PublicRoute";

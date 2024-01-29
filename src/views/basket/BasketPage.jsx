@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { BasketContext } from '../../context/basketContext';
 import "../../styles/BasketPage.scss";
 import { FaHourglassEnd } from "react-icons/fa";
-import { PaymentMethods, BasketItem, CheckoutSummary } from '../../components';
+import { BasketItem, CheckoutSummary } from '../../components';
 
 const BasketPage = () => {
   const { 
@@ -76,7 +76,6 @@ const BasketPage = () => {
             {/* basket right */}
             <div className='basket-r py-4'>
               <CheckoutSummary checkoutCount = { Number(checkoutCount) } checkoutTotal = { Number(checkoutTotal) } />
-              <PaymentMethods />
             </div>
           </div>
         </div>

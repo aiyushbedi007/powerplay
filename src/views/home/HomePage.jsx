@@ -4,7 +4,7 @@ import {
   Title,
   ProductList,
   Preloader,
-} from "../../components/common";
+} from "../../components";
 import { ProductContext } from "../../context/productContext";
 import { useContext } from "react";
 
